@@ -29,6 +29,8 @@ pip install -e .
 ## Example usage point group detection
 
 ```
+python
+
 from ase.build import molecule
 from pointgroup import PointGroupAnalyzer
 
@@ -44,6 +46,8 @@ print(pga.geometry)
 ## Example usage ideal gas thermo wrapper
 
 ```
+python
+
 from ase.build import molecule
 from pointgroup import IdealGasThermoAuto
 
