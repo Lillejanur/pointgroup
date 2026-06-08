@@ -2,7 +2,7 @@
 
 A Python package for automatic molecular point group detection and ideal-gas thermochemistry built on top of the Atomic Simulation Environment (ASE).
 
-It combines symmetry analysis with ASE’s thermochemistry tools to reduce manual setup and avoid errors in molecular thermochemistry workflows.
+It combines symmetry analysis with ASE’s thermochemistry tools to reduce manual setup and prevents errors in molecular thermochemistry workflows.
 
 ---
 
@@ -12,6 +12,15 @@ It combines symmetry analysis with ASE’s thermochemistry tools to reduce manua
 - Symmetry number assignment
 - Geometry classification (monoatomic / linear / nonlinear)
 - Wrapper around ASE `IdealGasThermo`
+
+---
+
+## Requirements
+
+- Python ≥ 3.10
+- numpy
+- scipy
+- ase
 
 ---
 
@@ -38,9 +47,9 @@ atoms = molecule("H2O")
 
 pga = PointGroupAnalyzer(atoms)
 
-print(pga.pointgroup)
-print(pga.symmetry_number)
-print(pga.geometry)
+print(pga.pointgroup) # C2v
+print(pga.symmetry_number) # 2
+print(pga.geometry) # 'linear'
 ```
 
 ## Example usage ideal gas thermo wrapper
