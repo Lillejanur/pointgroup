@@ -23,7 +23,7 @@ Clone the repository and install in editable mode:
 git clone https://github.com/Lillejanur/pointgroup.git
 cd pointgroup
 pip install -e .
-
+```
 ---
 
 ## Example usage
