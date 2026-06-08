@@ -26,8 +26,9 @@ pip install -e .
 ```
 ---
 
-## Example usage
+## Example usage point group detection
 
+```
 from ase.build import molecule
 from pointgroup import PointGroupAnalyzer
 
@@ -38,3 +39,23 @@ pga = PointGroupAnalyzer(atoms)
 print(pga.pointgroup)
 print(pga.symmetry_number)
 print(pga.geometry)
+```
+
+## Example usage ideal gas thermo wrapper
+
+```
+from ase.build import molecule
+from pointgroup import IdealGasThermoAuto
+
+atoms = molecule("H2")
+
+vib_energies = [0.5]  # eV
+
+thermo = IdealGasThermoAuto(atoms, vib_energies, potentialenergy=0)
+
+G = thermo.get_gibbs_energy(
+    temperature=298.15,
+    pressure=101325
+)
+```
+
