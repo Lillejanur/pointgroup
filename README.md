@@ -23,3 +23,18 @@ Clone the repository and install in editable mode:
 git clone https://github.com/Lillejanur/pointgroup.git
 cd pointgroup
 pip install -e .
+
+---
+
+## Example usage
+
+from ase.build import molecule
+from pointgroup import PointGroupAnalyzer
+
+atoms = molecule("H2O")
+
+pga = PointGroupAnalyzer(atoms)
+
+print(pga.pointgroup)
+print(pga.symmetry_number)
+print(pga.geometry)
