@@ -62,7 +62,7 @@ from pointgroup import IdealGasThermoAuto
 
 atoms = molecule("H2")
 
-vib_energies = [0.5]  # eV
+vib_energies = [0.5]  # eV; cm^-1 works with vib_unit='invcm' or vib_unit='cm^-1'
 
 thermo = IdealGasThermoAuto(atoms, vib_energies, potentialenergy=0)
 
